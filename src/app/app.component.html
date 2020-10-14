@@ -1,6 +1,7 @@
 <h1>Que.mk</h1>
+<button mat-raised-button>Useless button!</button>
 <ul>
   <li class="text" *ngFor="let item of items | async">
-    {{item.name}} {{item.surname}} {{item.age}}
+    {{item.name}} | {{item.surname}} | {{item.age}}
   </li>
 </ul>
