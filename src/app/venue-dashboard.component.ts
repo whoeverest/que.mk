@@ -17,8 +17,6 @@ function createShortId() {
     return id;
 }
 
-console.log(createShortId())
-
 @Component({
   selector: 'app-venue-dashboard',
   templateUrl: './venue-dashboard.component.html',
