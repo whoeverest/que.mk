@@ -1,12 +1,12 @@
-<div style="height: 100px;"></div>
+<div style="height: 100px"></div>
 
-<span style="font-size: 30px;">{{orderId}}</span>
+<span style="font-size: 30px">{{ orderId }}</span>
 
 <div *ngIf="order">
-    Id: {{orderId}} <br/>
-    Description: {{order.description}} <br/>
-    Status: {{order.status}} <br/>
-    <!-- Venue ID: {{order.venueId}} <br/> TODO: handle venue reference -->
-    ETA: {{order.eta}} <br/>
-    Price: {{order.price}} <br/>
+  Id: {{ orderId }} <br />
+  Description: {{ order.description }} <br />
+  Status: {{ order.status }} <br />
+  <!-- Venue ID: {{order.venueId}} <br/> TODO: handle venue reference -->
+  ETA: {{ order.eta }} <br />
+  Price: {{ order.price }} <br />
 </div>

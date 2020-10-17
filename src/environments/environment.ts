@@ -11,9 +11,9 @@ export const environment = {
     projectId: 'quemk-75a95',
     storageBucket: 'quemk-75a95.appspot.com',
     messagingSenderId: '862334012105',
-    appId: "1:862334012105:web:4a7c9227f4fd27a131db18",
-    measurementId: "G-CT07SQJZ4R"
-  }
+    appId: '1:862334012105:web:4a7c9227f4fd27a131db18',
+    measurementId: 'G-CT07SQJZ4R',
+  },
 };
 
 /*

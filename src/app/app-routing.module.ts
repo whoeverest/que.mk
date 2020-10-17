@@ -5,11 +5,11 @@ import { VenueDashboardComponent } from './venue-dashboard/venue-dashboard.compo
 
 const routes: Routes = [
   { path: 'orders/:orderId', component: OrderComponent },
-  { path: 'venues/:venueId/dashboard', component: VenueDashboardComponent }
+  { path: 'venues/:venueId/dashboard', component: VenueDashboardComponent },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

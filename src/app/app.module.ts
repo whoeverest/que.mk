@@ -18,20 +18,16 @@ import { OrderComponent } from './order/order.component';
 import { VenueDashboardComponent } from './venue-dashboard/venue-dashboard.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    OrderComponent,
-    VenueDashboardComponent
-  ],
+  declarations: [AppComponent, OrderComponent, VenueDashboardComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
     BrowserAnimationsModule,
-    MatButtonModule
+    MatButtonModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
