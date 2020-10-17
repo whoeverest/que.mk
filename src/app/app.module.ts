@@ -2,7 +2,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
 
 // firebase
 import { AngularFireModule } from '@angular/fire';
@@ -14,11 +13,20 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 // material ui
 import { MatButtonModule } from '@angular/material/button';
+
+// components
+import { AppComponent } from './app.component';
 import { OrderComponent } from './order/order.component';
 import { VenueDashboardComponent } from './venue-dashboard/venue-dashboard.component';
+import { EnterCodeComponent } from './enter-code/enter-code.component';
 
 @NgModule({
-  declarations: [AppComponent, OrderComponent, VenueDashboardComponent],
+  declarations: [
+    AppComponent,
+    OrderComponent,
+    VenueDashboardComponent,
+    EnterCodeComponent,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
