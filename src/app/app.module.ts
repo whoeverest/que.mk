@@ -17,8 +17,9 @@ import { MatButtonModule } from '@angular/material/button';
 // components
 import { AppComponent } from './app.component';
 import { OrderComponent } from './order/order.component';
-import { VenueDashboardComponent } from './venue-dashboard/venue-dashboard.component';
+import { VenueDashboardComponent } from './venues/venue-dashboard.component';
 import { EnterCodeComponent } from './enter-code/enter-code.component';
+import { VenuesListComponent } from './venues/venues-list.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { EnterCodeComponent } from './enter-code/enter-code.component';
     OrderComponent,
     VenueDashboardComponent,
     EnterCodeComponent,
+    VenuesListComponent,
   ],
   imports: [
     BrowserModule,

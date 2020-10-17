@@ -40,7 +40,7 @@ export class VenueDashboardComponent implements OnInit {
         .collection('orders', (ref) =>
           ref.where('venueId', '==', this.venueRef)
         )
-        .valueChanges();
+        .valueChanges({ idField: 'id' });
     });
   }
 
@@ -51,9 +51,17 @@ export class VenueDashboardComponent implements OnInit {
     this.firestore
       .collection('orders')
       .doc(newId)
-      .set({ description, price, venueId: this.venueRef })
-      .then((val) => {
-        console.log(val);
-      });
+      .set({ description, price, status: 'new', venueId: this.venueRef });
+  }
+
+  orderReady(orderId: string): void {
+    this.firestore
+      .collection('orders')
+      .doc(orderId)
+      .update({ status: 'ready' });
+  }
+
+  deleteOrder(orderId: string): void {
+    this.firestore.collection('orders').doc(orderId).delete();
   }
 }

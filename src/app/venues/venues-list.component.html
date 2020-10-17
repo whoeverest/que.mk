@@ -1,0 +1,11 @@
+Venues:
+<ul>
+  <li *ngFor="let venue of venues | async">
+    <a
+      [routerLink]="['/venues', venue.id, 'dashboard']"
+      routerLinkActive="router-link-active"
+    >
+      {{ venue.name }}
+    </a>
+  </li>
+</ul>

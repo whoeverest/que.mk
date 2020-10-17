@@ -1,10 +1,18 @@
-<span style="font-size: 30px">{{ orderId }}</span>
+<a [routerLink]="['/']">[back]</a> <br />
+<br />
 
-<div *ngIf="order">
-  Id: {{ orderId }} <br />
+<div *ngIf="order; else not_found">
+  <h1>{{ orderId }}</h1>
+  Id: {{ orderId | uppercase }} <br />
   Description: {{ order.description }} <br />
   Status: {{ order.status }} <br />
   <!-- Venue ID: {{order.venueId}} <br/> TODO: handle venue reference -->
-  ETA: {{ order.eta }} <br />
-  Price: {{ order.price }} <br />
+  ETA: / <br />
+  Price: {{ order.price }} ден. <br />
+
+  <h1 *ngIf="order.status == 'ready'">Нарачката е спремна!</h1>
 </div>
+
+<ng-template #not_found>
+  Нарачката не е пронајдена, или била во меѓувреме избришана.
+</ng-template>

@@ -16,7 +16,7 @@ export class EnterCodeComponent implements OnInit {
     this.items = this.firestore.collection('items').valueChanges();
   }
 
-  enterOrderNo(orderNo): void {
-    this.router.navigate(['orders', orderNo]);
+  enterOrderNo(orderNo: string): void {
+    this.router.navigate(['orders', orderNo.toLowerCase()]);
   }
 }

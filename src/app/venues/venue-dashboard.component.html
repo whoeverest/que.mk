@@ -1,0 +1,20 @@
+<a [routerLink]="['/venues']">[back]</a> <br /><br />
+
+<h1>{{ venueId }}</h1>
+<p>Нарачки:</p>
+<ul>
+  <li *ngFor="let order of orders | async">
+    {{ order.id | uppercase }} / {{ order.description }} / {{ order.price }}мкд.
+    <button *ngIf="order.status == 'new'" (click)="orderReady(order.id)">
+      Ready!
+    </button>
+    <button *ngIf="order.status == 'ready'" (click)="deleteOrder(order.id)">
+      Delete
+    </button>
+  </li>
+</ul>
+
+<p>Нова нарачка:</p>
+Опис: <input #description /> <br />
+Цена: <input #price /> <br />
+<button (click)="newOrder(description, price)">Зачувај</button>
