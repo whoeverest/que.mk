@@ -1,7 +1,8 @@
 <div style="height: 100px;"></div>
 
 <span style="font-size: 30px;">{{orderId}}</span>
-<div>
+
+<div *ngIf="order">
     Id: {{orderId}} <br/>
     Description: {{order.description}} <br/>
     Status: {{order.status}} <br/>
