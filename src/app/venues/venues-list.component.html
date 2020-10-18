@@ -1,11 +1,28 @@
-Venues:
-<ul>
-  <li *ngFor="let venue of venues | async">
-    <a
-      [routerLink]="['/venues', venue.id, 'dashboard']"
-      routerLinkActive="router-link-active"
-    >
-      {{ venue.name }}
-    </a>
-  </li>
-</ul>
+Current user ID: {{ currentUserId }}
+
+<div *ngIf="venues$ | async as venues; else loadingVenues">
+  <div *ngIf="venues.length > 0; else noVenues">
+    Venues:
+    <ul>
+      <li *ngFor="let venue of venues">
+        {{ venue.name }}
+        <a
+          [routerLink]="['/venues', venue.id, 'dashboard']"
+          routerLinkActive="router-link-active"
+          >[Dashboard]
+        </a>
+        <a
+          [routerLink]="['/venues', venue.id, 'menu']"
+          routerLinkActive="router-link-active"
+          >[Menu]
+        </a>
+      </li>
+    </ul>
+  </div>
+  <ng-template #noVenues>
+    You don't own any venues yes. Create your first one!
+    <button (click)="newVenue()">Create venue!</button>
+  </ng-template>
+</div>
+
+<ng-template #loadingVenues> Loading venues... </ng-template>

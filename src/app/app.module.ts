@@ -20,6 +20,7 @@ import { OrderComponent } from './order/order.component';
 import { VenueDashboardComponent } from './venues/venue-dashboard.component';
 import { EnterCodeComponent } from './enter-code/enter-code.component';
 import { VenuesListComponent } from './venues/venues-list.component';
+import { VenueMenuComponent } from './venues/venue-menu.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { VenuesListComponent } from './venues/venues-list.component';
     VenueDashboardComponent,
     EnterCodeComponent,
     VenuesListComponent,
+    VenueMenuComponent,
   ],
   imports: [
     BrowserModule,

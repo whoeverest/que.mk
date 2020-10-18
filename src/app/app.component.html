@@ -1,15 +1,10 @@
-<div
-  style="
-    width: 640px;
-    margin-left: auto;
-    margin-right: auto;
-    border-left: 1px solid silver;
-    border-right: 1px solid silver;
-  "
->
+<div style="width: 640px; margin-left: auto; margin-right: auto">
   <!-- todo: proper layout solution-->
 
   <a [routerLink]="['/']"><h1>Que.mk</h1></a>
 
-  <router-outlet></router-outlet>
+  <div><router-outlet></router-outlet></div>
+
+  <br /><br />
+  <p>Links: <a [routerLink]="['/venues']">Venues</a></p>
 </div>
