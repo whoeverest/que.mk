@@ -3,11 +3,11 @@ import { ActivatedRoute } from '@angular/router';
 import { AngularFirestore, DocumentReference } from '@angular/fire/firestore';
 import { Observable } from 'rxjs';
 
-function createShortId() {
-  const chars = 'qwertyuiopasdfghjklzxcvbnm';
-  const nums = '1234567890';
+function createShortId(): string {
+  const chars = 'abcdefgh';
+  const nums = '123456789';
   const all = chars.concat(nums);
-  let length = 3;
+  let length = 4;
   let id = '';
   while (length) {
     const rndCharIndex = Math.floor(Math.random() * all.length);
