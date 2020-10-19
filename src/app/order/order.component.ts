@@ -20,7 +20,8 @@ export class OrderComponent implements OnInit {
     this.activeRoute.params.subscribe((params) => {
       this.orderId = params.orderId;
       this.order = this.firestore
-        .doc(`/orders/${this.orderId}`)
+        .collection('orders')
+        .doc(this.orderId)
         .valueChanges()
         .subscribe((order) => {
           // todo: use async pipe instead of subscribing manually

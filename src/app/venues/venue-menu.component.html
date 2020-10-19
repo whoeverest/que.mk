@@ -1,1 +1,12 @@
-<p>Venue menu.</p>
+<a [routerLink]="['../../']">[back]</a>
+
+<div *ngIf="venue$ | async as venue; else loading">
+  <h1>{{ venue.name }}</h1>
+  <ul>
+    <li *ngFor="let item of venue.menu; index as i">
+      {{ i }}. {{ item.name }} / {{ item.description }} / {{ item.price }}ден.
+    </li>
+  </ul>
+</div>
+
+<ng-template #loading>Loading...</ng-template>
